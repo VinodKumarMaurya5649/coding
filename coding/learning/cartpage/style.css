@@ -1,0 +1,14 @@
+#head{
+    background-color: color-mix(in srgb, blue 25%, rgb(180, 180, 7) 75%);
+}
+#subhead{
+    background-color: rgb(250, 146, 166);
+}
+.logarea{
+    background: url(ai-generated-8581189_1920.jpg );
+    background-size:contain;  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+    font-variant-caps: petite-caps;
+    color:yellow;
+    background-origin: ;
+}
