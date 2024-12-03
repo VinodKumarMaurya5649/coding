@@ -1,0 +1,17 @@
+.red{
+	background-color:#ff0000;	
+}
+.green{
+	background-color:#00ff00;
+}
+.blue{
+background-color:#0000ff;
+}
+.yellow{
+	background-color:yellow;
+}
+button{color:white;
+padding:15px;
+border-radius:5px;
+font-weight:bold;
+}

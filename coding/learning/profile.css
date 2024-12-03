@@ -1,0 +1,19 @@
+img{
+	width:100px;
+}
+.rat{
+	background-color:coral;
+}
+.navigate{
+	background-color:lightCoral ;
+	color: white;
+}
+.content{
+	background-color:linen;
+	text-align:center;
+}
+div{
+	margin-bottom:10px;
+	border-radius:5px;
+	padding:12px;
+}
