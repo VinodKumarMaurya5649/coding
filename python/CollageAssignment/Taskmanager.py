@@ -45,13 +45,11 @@ def filter_prior(priority):
     fitered_task= filter( lambda task,priority: task['priority'] == priority,tasks) #criteria 
     for task in fitered_task:
         printf(f'{task["title"]}')
-import datetime
 def filter_deadline(deadline):
-    datetime.strptime(deadline,"%Y-%m-%d")
-    filter_by_date=list(filter(lambda task: task["deadline"] <= deadline,tasks))
+    filtered_task = [task for task in tasks if task['deadline'] == deadline]
+    return filtered_task 
 def filter_stetus(stetus):
     filtered_task = [task for task in tasks if task['stetus'] == stetus]
     return filtered_task 
 display_tasks()
- 
  
