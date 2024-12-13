@@ -13,4 +13,4 @@ while True:
     except ValueError:
         print("enter valid input")
 #output
-print(min_block(G))
+print(min_block(G)) 
