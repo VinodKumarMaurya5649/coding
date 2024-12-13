@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/Javascript">
+        function validateForm(){
+    var name = document.myForm.name.value;
+    var password = document.myForm.password1.value;
+    var confirmPassword = document.myForm.password2.value;
+    var email = document.myForm.email.value;
+    if(name = " "){
+        alert("Name cannot be blank or null");
+            return false;
+        }
+    else if(password.length<6)
+    {
+        alert("passward mustbe atleast 6 Charector long");
+        return false;
+    if(password==confirmPassword){
+        return true;
+    }
+    else{
+        alert("Passward must be same");
+        return false;
+    }
+    }
+    var emailErr =true;
+    {
+        if(email =""){
+            printError("emailErr","you must enter email address");
+        }
+        else{
+            var regex = \^/S+@/S+\.\S+$/;
+            if(regex.test(email==false)){
+                printError("emailErr","Please enter valid email address")
+            }
+           else{
+            printError("emailErr", " ");
+            emailErr = false;
+           }
+        }
+    }
+    }
+    </script>
+</head>
+<body>
+    <form action="return validateForm()" method="post" name="myForm"></form>
+     Name:<input type="text" name="name"><br>
+     Password:<input type="password" name="password1"><br>
+     confirmPassword:<input type="password" name="password2"><br>
+     Email:<input type="text" name="email"><br>
+     <div class="error" id="emailErr"></div>
+     <input type="submit" value="Register">
+</body>
+</html> 
