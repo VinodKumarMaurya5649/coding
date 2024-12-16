@@ -1,5 +1,5 @@
 from random import randint
-    def main():
+def main():
         menu = {1:"roll dice",2:"rockPaperSciessor",3:"exit"}
         while True:
             try:
@@ -13,7 +13,7 @@ from random import randint
             except:
                 print("invalid input")
                 break
-    def rockPaperScissor():
+def rockPaperScissor():
         Choices = {1:"rock",2:"paper",3:"Scissor"}
         score = 0;attempts = 0
         while True:
@@ -43,7 +43,7 @@ from random import randint
                 print("invalid choice")
                 print(f" Your Current Score is: {score}/{attempts}")
                 break
-    def dice():
+def dice():
         menu = {1:"roll dice",3:"menu"}
         while True:
             try:
