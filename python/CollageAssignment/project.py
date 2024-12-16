@@ -1,7 +1,4 @@
 from random import randint
-class game():
-    def __init__():
-        main()
     def main():
         menu = {1:"roll dice",2:"rockPaperSciessor",3:"exit"}
         while True:
