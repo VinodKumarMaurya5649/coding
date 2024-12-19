@@ -16,13 +16,16 @@ class Book:
     1. get varios book details
     2. to display book details
     '''
-    def __init__(self,Title,description,author,genre,Year):
+    def __init__(self,Title,author,genre,Year):
         self.title = Title
-        self.description = description
         self.author= author
         self.genre= genre
         self.year=Year
     def display(self):
-        return f'title - title'
+        return f'title - {self.title}'
 
-book1 = Book(address,"bookname","auther",2003)
+book1 = Book("bookname","auther","comrdy",2003)
+#print(book1.__doc__)\
+x=10
+y=20
+X.__add__(y) # 30
