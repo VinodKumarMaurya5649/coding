@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Username",
+      "request": "launch",
+      "mainClass": "Username",
+      "projectName": "coding_50b18b23"
+    },
+    {
+      "type": "java",
+      "name": "Squre",
+      "request": "launch",
+      "mainClass": "Squre",
+      "projectName": "coding_50b18b23"
+    },
+    {
+      "type": "java",
+      "name": "inheritance$Username",
+      "request": "launch",
+      "mainClass": "inheritance$Username",
+      "projectName": "coding_50b18b23"
+    },
+    {
+      "type": "java",
       "name": "LMS",
       "request": "launch",
       "mainClass": "LMS",
