@@ -5,17 +5,17 @@
     */
      String title;
      String author;
-     String genre
+     String genre;
      int year;
      float PI = 3.14f;
-   Book(String title,String author,String genre,int year){
+   Books(String title,String author,String genre,int year){
         this.title = title;
         this.author = author;
         this.genre = genre;
-        this.year = genre;
+        this.year = year;
    }
    String getDetails(){
-        return "title" + this.title;
+        return "Title: " + this.title;
    }
         
     
@@ -23,6 +23,7 @@
 
  public class LMS {
     public static void main(String[] args){
-        Books  book1 = new Book("a","auth","rtyu",1999)
+        Books  book1 = new Books("a","auth","rtyu",1999);
+        System.out.println(book1.getDetails());  
     }     
-}        
+}         

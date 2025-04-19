@@ -40,7 +40,7 @@ def rockPaperScissor():
                 else:
                     print("you lose")
             except:
-                print("invalid choice")
+                print("invalid choice") 
                 print(f" Your Current Score is: {score}/{attempts}")
                 break
 def dice():
@@ -52,7 +52,7 @@ def dice():
                     print(randint(1,6))
                 elif usrInput == 2:
                     main()
-                    break
+                    break 
             except:
                 print("invalid input")
 
