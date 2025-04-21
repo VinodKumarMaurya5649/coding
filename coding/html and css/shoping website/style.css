@@ -19,3 +19,9 @@
     .item h2{
         font: size 5px;;
     }
+    .img-cantainer{
+        display: block;
+        display: inline;
+        display: flexbox;
+        flex-direction: row;
+    }
