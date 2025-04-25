@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "ObjCreate",
+      "request": "launch",
+      "mainClass": "ObjCreate",
+      "projectName": "coding_50b18b23"
+    },
+    {
+      "type": "java",
       "name": "Base2",
       "request": "launch",
       "mainClass": "Base2",
