@@ -5,4 +5,5 @@ pos  = list(map(int, input().split()))
 
 for i in range(len(elemnt)):
     arr.insert(pos[i],elemnt[i])
+print(arr)
     
