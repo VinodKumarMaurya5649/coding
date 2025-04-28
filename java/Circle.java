@@ -1,6 +1,6 @@
  public class Circle {
-    float radius;
-    static  float PI = 3.14f;
+    float radius; // Object variavle -Instance variavle 
+    static  float PI = 3.14f;// fixed -static// static member
     Circle(float radius){
         this.radius = radius;
     }
