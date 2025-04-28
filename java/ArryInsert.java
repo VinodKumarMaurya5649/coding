@@ -1,5 +1,5 @@
 import java.util.*;
-public class InsertArry{
+public class ArryInsert{
  	public static void main(String arg[]){
 		Scanner sc =new Scanner(System.in);
 		 System.out.println("enter n");
@@ -24,5 +24,6 @@ public class InsertArry{
 	  for(int i= 0;i<newarr.length;i++){
 			System.out.println(newarr[i]);
 		}
+		sc.close();
 }
 }
