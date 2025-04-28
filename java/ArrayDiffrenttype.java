@@ -15,5 +15,8 @@ class ArrayDiffrenttype{
         System.out.println(e[0]);
         System.out.println(f[0]);
         System.out.println(g[1]);
+        for(int i:a){
+         System.out.println(i);
+        }
     }
 }
