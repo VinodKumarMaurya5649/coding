@@ -67,8 +67,8 @@ public static void main(String[] args) {
         new City[] { new City("balrampur",23000000)}
     };
     System.out.println("Created an arrys 0f 10 diffrent class");
-    for(int i = 0;i<arrayofObjects.length;i++){
-        System.out.println(arrayofObjects[i]);
+    for (int index = 0; index < arrayofObjects.length; index++) {
+        System.out.println("Size of arrray at index "+ index +":"+((Object[])arrayofObjects[index]));
     }
 }
 }

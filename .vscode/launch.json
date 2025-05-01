@@ -3,6 +3,40 @@
   "configurations": [
     {
       "type": "java",
+      "name": "ArryInsert",
+      "request": "launch",
+      "mainClass": "ArryInsert",
+      "projectName": "coding_50b18b23"
+    },
+    {
+      "type": "java",
+      "name": "king",
+      "request": "launch",
+      "mainClass": "king",
+      "projectName": "coding_50b18b23"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "coding_50b18b23"
+    },
+    {
+      "type": "java",
+      "name": "test",
+      "request": "launch",
+      "mainClass": "test",
+      "projectName": "coding_50b18b23"
+    },
+    {
+      "type": "java",
+      "name": "Launch Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
       "name": "ObjCreate",
       "request": "launch",
       "mainClass": "ObjCreate",
@@ -50,8 +84,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/coding/python/compile",
-      "program": "d:/coding/python/compile/build/Debug/outDebug",
+      "cwd": "d:/coding/java",
+      "program": "d:/coding/java/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
