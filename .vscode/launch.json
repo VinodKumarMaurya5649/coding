@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "creation",
+      "request": "launch",
+      "mainClass": "creation",
+      "projectName": "coding_50b18b23"
+    },
+    {
+      "type": "java",
       "name": "ArryInsert",
       "request": "launch",
       "mainClass": "ArryInsert",

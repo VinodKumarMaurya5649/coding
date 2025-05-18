@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"/></svg></button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div> -->
+    <div class="profile">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24">
+                    <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z" />
+                </svg></button>
+            <div id="myDropdown" class="dropdown-content">
+                <div class="stetus">
+                    <h5>You cruntlly</h5>
+                    <div class="detail">
+                        <div>
+                            <img src="artistking logo copy.png" alt="">
+                        </div>
+                        <div class="userdetail">
+                            <h3>Username</h3>
+                            <h4>Personal</h4>
+                            <h3>red123@gmail.com</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="account">
+                    <a href="#"><button>Convert into Business</button></a>
+                    <h5>your accounts</h5>
+                    <a href="#"><button>Add account</button></a>
+                    <a href="#"><button>log out</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<style>
+    .profile {
+        display: flex;
+        justify-content: center;
+        align-items: right;
+        padding: 30px;
+    }
+       .dropbtn {
+        background-color: aqua;
+        color: black;
+        padding: 6px 0px 6px 0p;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropbtn:hover,
+    .dropbtn:focus {
+        background-color: red;
+        color: blanchedalmond;
+    }
+
+    .dropdown {
+        padding: -30px;
+        justify-content: left;
+        align-items: left;
+        position: relative;
+        /* display: inline-block; */
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: brown;
+        min-width: 300px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #677653;
+    }
+
+    .show {
+        display: block;
+    }
+</style>
+<script>
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDrp = dropdowns[i];
+                if (openDrp.classList.contains('show')) {
+                    openDrp.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>

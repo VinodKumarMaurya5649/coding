@@ -1,27 +1,77 @@
+body{
+    /* background-color: #44cf6c; */
+}
 .cantainer{ 
-    height: 15vh;
-    font-size: 10px;
-    background:linear-gradient(1deg,blue,pink,white);
-    display:flex;
+    height: 14vh;
+    font-size: x-small;
+    /* background: linear-gradient(90deg, #00ff87, #60EFFF); */
+    display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    flex-grow: inherit;
-
+    flex-wrap: inherit;
+    margin: auto;
+    img{
+        height:auto;
+    }
+    }
+    label{
+        font-family: math;
+    font-size: x-large;
+    font-weight: 600;
+    }
+    .item h1{
+        font-size:auto;
+        font-stretch: condensed;
+    }
+    .item h2{
+        font: size auto;
     }
     .item{
     color: rgb(0, 0, 0);
-    margin: 1.5px ;
-    padding-left:2px;
+    margin: auto;
     }
-    .item h1{
-        font-size:20px ;
+    select{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-decoration: dashed;
+        border: none;
+        padding: initial;
+        text-align: center;
+        font-size: x-large;
     }
-    .item h2{
-        font: size 5px;;
+    .imgcantain{  
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            flex-direction: row;
+            width: 50vh;
+            margin: auto;
+            text-align: center;
+
+        }
+    .img-item img{
+        height: 120px;
+        width: 120px;
+        border-radius: 5%;
     }
     .img-cantainer{
-        display: block;
-        display: inline;
-        display: flexbox;
+        padding: 26px;
+        display:flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        }
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+    flex-direction: row;
+}
+section{
+    border-radius: 3%;
+    /* background: linear-gradient(90deg, #6ff7e8, #1f7ea1); */
+    h1{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 100%;
+        padding:7px;
     }
+}

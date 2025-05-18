@@ -21,24 +21,25 @@ public class ArryInsert{
 		//  for (int i = pos1; i < n; i++) {
         //     newarr[i + 1] = arr[i];
         // }
-		Array b =new Array();
-	  for(int i= 0;i<arr.length;i++){
-			System.out.println((b.insert(pos1,ele1, arr)));
+		System.out.println("enter the how many element add")
+		int k = sc.nextInt();
+		int[] b =new int[n+k];
+		Array temparr = new Array(pos1,ele1,arr,b);
+		System.out.println(b);
+		for(int i=0;i<b.length;i++){
+			System.out.print(b[i]+" ");
 		}
-		sc.close();
 }
 }
 class Array{
-	int [] insert(int pos,int input,int [] arr){
-		int n = arr.length;
-		int[]newarr =new int[n+1];
+	 Array(int pos,int input,int [] arr ,int[] b){
 		for(int i=0;i<pos;i++){
-			newarr[i] = arr[i];
+			b[i] = arr[i];
 		}
-		 newarr[pos] = input;
-		 for (int i = pos; i < n; i++) {
-            newarr[i + 1] = arr[i];
+		 b[pos] = input;
+		 for (int i = pos; i <b.length; i++) {
+            b[i + 1] = arr[i];
         }
-		return newarr;
+		
 	}
 }
