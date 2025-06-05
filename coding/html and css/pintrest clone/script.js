@@ -1,8 +1,15 @@
-function Dropdown() {
-    var x = document.getElementById(myDiv);
-    if (x.style.display === "none"){
-        x.style.display = "block";
-     } else {
-        x.display = "none";
-     }
-}
+function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDrp = dropdowns[i];
+                if (openDrp.classList.contains('show')) {
+                    openDrp.classList.remove('show');
+                }
+            }
+        }
+    }

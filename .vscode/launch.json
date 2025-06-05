@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "LinkList",
+      "request": "launch",
+      "mainClass": "LinkList",
+      "projectName": "coding_50b18b23"
+    },
+    {
+      "type": "java",
       "name": "creation",
       "request": "launch",
       "mainClass": "creation",

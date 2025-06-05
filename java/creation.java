@@ -8,10 +8,10 @@ class Node{
 
     }
 }
-class LinkedList {
+class LinkedList1{
     Node head;
 
-     LinkedList() {
+     LinkedList1() {
         this.head = null;
     }
 

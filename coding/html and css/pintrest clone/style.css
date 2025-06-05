@@ -4,9 +4,15 @@
     box-sizing: border-box;
 
 }
+
 .parent{
-    display:flex;
-    flex-wrap: wrap;
+    .horinav{
+            display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        flex-direction: row;
+}
 }
 nav{
     margin: 20px;
@@ -23,15 +29,7 @@ nav{
         margin-bottom: 60px;
     }
 } 
-.horinav{
-   width: 100;
-   display: flex;
-    flex-direction: row;
-    img{
-        height: 30px;
-        width: 30px;
-    }
-}
+
 .cantainer{
     /* width: 100%;
     columns: 5;
@@ -48,19 +46,90 @@ nav{
     position: absolute;
 }
 input {
-    font-family:serif;
+    font-family: serif;
     border-radius: 10px;
     border: none;
     background: rgb(202, 223, 205);
-    padding: 3vh 101vh 3vh 2vh;
+    padding: 16px 500px 16px 1px;
     margin: 1vh 1vh 1vh 12vh;
 }
 input:focus{
     outline : none;
 }
-#myDiv{
-    width: 100%;
-    text-align: center;
-    background-color: lightblue;
-    margin-top: 10px;
+
+   .profile {
+        display: flex
+;
+    align-items: center;
+    padding: 16px;
+
+         .dropbtn {
+               background-color: red;
+        /* padding: 0px 0px 1px 0px; */
+        width: 35px;
+        height: 35px;
+        margin: 0px 5px 0px 0px;
+        border: none;
+        border-radius: 20%;
+        cursor: pointer; 
+    }
+
+    .dropbtn:hover,
+    .dropbtn:focus {
+        color: blanchedalmond;
+        border:none;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+          border-radius: 10px;
+    }
+
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #98bdf1;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
 }
+   
+    .account a{
+        button{
+            color: rgb(0 0 0);
+            font-family: inherit;
+            border: hidden;
+            font-weight: 500;
+            background-color: #f0ffdb;
+            padding: 5px;
+            border-radius: 5px;
+        }
+       
+    }
+    .dropdown-content a,h3,h4,img{
+        color: black;
+        padding: 2px 0px 5px 22px;
+        text-decoration: none;
+        display: block;
+        font-family: system-ui;
+        font-size: medium;
+    }
+    .drheading{
+        color: rgb(0, 0, 0);
+        padding: 7px 0px 4px 18px;
+        text-decoration: none;
+        display: block;
+        font-family: monospace;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #677653;
+    }
+
+    .show {
+        display: block;
+    }
+    }

@@ -16,14 +16,15 @@
             <a href="#">Link 3</a>
         </div> -->
     <div class="profile">
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24">
+        <div class="dropdown" style="float:right;">
+            <button onclick="myFunction()" onselect="myFunction
+            ()" class="dropbtn"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="20">
                     <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z" />
                 </svg></button>
             <div id="myDropdown" class="dropdown-content">
                 <div class="stetus">
-                    <h5>You cruntlly</h5>
+                    <h5 class="drheading">You currentlly</h5>
                     <div class="detail">
                         <div>
                             <img src="artistking logo copy.png" alt="">
@@ -37,7 +38,7 @@
                 </div>
                 <div class="account">
                     <a href="#"><button>Convert into Business</button></a>
-                    <h5>your accounts</h5>
+                    <h5 class="drheading">your accounts</h5>
                     <a href="#"><button>Add account</button></a>
                     <a href="#"><button>log out</button></a>
                 </div>
@@ -49,49 +50,75 @@
 
 </html>
 <style>
+    *{
+        padding:0;
+        margin:0;
+    }
     .profile {
         display: flex;
         justify-content: center;
         align-items: right;
+        
         padding: 30px;
-    }
-       .dropbtn {
-        background-color: aqua;
-        color: black;
+
+         .dropbtn {
+        background-color: transparent;
         padding: 6px 0px 6px 0p;
         font-size: 20px;
         border: none;
+        border-radius: 20%;
         cursor: pointer;
     }
 
     .dropbtn:hover,
     .dropbtn:focus {
-        background-color: red;
         color: blanchedalmond;
+        border:none;
     }
 
     .dropdown {
-        padding: -30px;
-        justify-content: left;
-        align-items: left;
         position: relative;
-        /* display: inline-block; */
+        display: inline-block;
+          border-radius: 10px;
     }
 
     .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: brown;
-        min-width: 300px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #98bdf1;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+}
+   
+    .account a{
+        button{
+            color: rgb(0 0 0);
+            font-family: inherit;
+            border: hidden;
+            font-weight: 500;
+            background-color: #f0ffdb;
+            padding: 5px;
+            border-radius: 5px;
+        }
+       
     }
-
-    .dropdown-content a {
+    .dropdown-content a,h3,h4,img{
         color: black;
-        padding: 12px 16px;
+        padding: 2px 0px 5px 22px;
         text-decoration: none;
         display: block;
+        font-family: system-ui;
+        font-size: medium;
+    }
+    .drheading{
+        color: rgb(0, 0, 0);
+        padding: 7px 0px 4px 18px;
+        text-decoration: none;
+        display: block;
+        font-family: monospace;
     }
 
     .dropdown-content a:hover {
@@ -101,6 +128,8 @@
     .show {
         display: block;
     }
+    }
+      
 </style>
 <script>
     function myFunction() {

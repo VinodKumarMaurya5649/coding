@@ -1,5 +1,5 @@
-import java.util.*;
-public class ArryInsert{
+import java.util.*; 
+class ArryInsert{
  	public static void main(String arg[]){
 		Scanner sc =new Scanner(System.in);
 		 System.out.println("enter n");
@@ -21,25 +21,27 @@ public class ArryInsert{
 		//  for (int i = pos1; i < n; i++) {
         //     newarr[i + 1] = arr[i];
         // }
-		System.out.println("enter the how many element add")
+		System.out.println("enter the how many element add");
 		int k = sc.nextInt();
 		int[] b =new int[n+k];
-		Array temparr = new Array(pos1,ele1,arr,b);
+		new Array(pos1,ele1, arr, b);
 		System.out.println(b);
 		for(int i=0;i<b.length;i++){
 			System.out.print(b[i]+" ");
 		}
-}
-}
-class Array{
-	 Array(int pos,int input,int [] arr ,int[] b){
-		for(int i=0;i<pos;i++){
-			b[i] = arr[i];
-		}
-		 b[pos] = input;
-		 for (int i = pos; i <b.length; i++) {
-            b[i + 1] = arr[i];
-        }
-		
+		sc.close();
 	}
+}
+
+class Array{
+    Array(int pos,int input,int [] arr ,int[] b){
+	for(int i=0;i<pos;i++){
+		b[i] = arr[i];
+	}
+	 b[pos] = input;
+	 for (int i = pos; i <b.length; i++) {
+		b[i + 1] = arr[i];
+	}
+	return;
+}
 }
