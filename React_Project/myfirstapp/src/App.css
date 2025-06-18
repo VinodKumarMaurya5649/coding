@@ -1,0 +1,25 @@
+@import './constants.css';
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand+Pre:wght@400..700&display=swap');
+
+
+html,body{
+  margin:0;
+  padding:0;
+}
+
+.App {
+ display : grid;
+ place-content: center;
+  background-color: var(--bg-color);
+  font-family: 'Edu VIC WA NT Hand Pre', cursive;
+  font-weight: bold;
+  
+}
+
+
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
