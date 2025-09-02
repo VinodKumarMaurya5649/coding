@@ -1,9 +1,9 @@
 .pieces{      
     position: absolute;
-    left: calc(2.2 * var(--tile-size));
-    top: 9px;
-    bottom: 29px;
-    right: calc(1.95 * var(--tile-size));
+    left: calc(5.9 * var(--tile-size));
+    top: 8px;
+    bottom: 76px;
+    right: calc(5.65* var(--tile-size));
     background-color: rgba(200, 0, 0, 0.5);
 
 }
