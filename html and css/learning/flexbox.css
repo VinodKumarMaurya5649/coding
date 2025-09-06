@@ -1,0 +1,27 @@
+.all{
+border: solid 4px #806868;
+display:flex;	
+}
+button{	
+border-radius:10px;
+	margin:10px;
+	border:2px solid #457081;
+	
+}
+h3{margin-left:4px;
+	font-size:30px;
+}
+img{
+	position:absolute;
+	width:150px;
+}
+
+.fx{
+	z-index:2;
+	left:150px
+}
+.rx{
+	z-index:1;
+	top:120px;
+	left:40px;
+}

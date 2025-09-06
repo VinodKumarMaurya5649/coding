@@ -1,0 +1,53 @@
+h1{color: rgb(252, 253, 253);
+text-align: center;
+font-size: 50px;
+margin:0;
+padding: 25px;
+font-family:Verdana,;
+
+}
+.grediant{border:solid 2px,rgb(240, 224, 8) ;
+    border-radius: 20px;
+    background: linear-gradient(rgb(37, 201, 151),rgb(228, 179, 193),rgb(241, 149, 195));
+}
+button{
+     font-family: cursive;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(114, 21, 41);
+    background-color: rgba(243, 29, 14, 0);
+    border:solid 3px rgb(192, 214, 188);
+    border-radius: 0cm;
+    
+}
+.swich{
+    text-align:left;
+    border-radius: 10mm;
+    background: linear-gradient(purple,white,rgb(139, 41, 41));
+    display: flexbox;
+}
+h2{margin-top: 1px;
+    font-size: 25px;
+    color: rgba(248, 248, 248, 0.897);
+    background-color: rgb(250, 11, 11);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.new{
+    color: rgb(255, 4, 4);
+    background-color: rgb(235, 214, 214);
+    border:solid 2px rgb(255, 75, 4);
+    font-size: 15px;
+    border-radius: 10px;
+}
+h3{
+    text-align: center;
+    margin-top:1px;
+    color: rgb(206, 213, 241);
+    background:linear-gradient(45deg,rgb(219, 67, 67),rgb(122, 53, 53),rgb(35, 110, 35));
+}
+Div{background:linear-gradient(90deg,purple,blue,rgb(110, 102, 103),yellow)
+
+}
+body{
+    border:soli 8px black ;
+}
