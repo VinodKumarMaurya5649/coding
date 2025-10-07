@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>User Profile - V2V Mesh Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <style>
+        .ashoka-chakra {
+            width: 24px;
+            height: 24px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%231173d4"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+    <div class="flex h-screen w-full">
+        <!-- Sidebar -->
+        <aside class="w-80 flex-shrink-0 bg-white dark:bg-background-dark border-r border-background-light dark:border-gray-800 p-6 flex flex-col">
+            <div class="flex items-center gap-3 mb-8">
+                <span class="ashoka-chakra"></span>
+                <h1 class="text-xl font-bold text-gray-900 dark:text-white">V2V Mesh Dashboard</h1>
+            </div>
+            
+            <nav class="flex flex-col gap-4">
+                <!-- Home/Dashboard -->
+                <div class="mb-4">
+                    <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 group" href="./index.html">
+                        <svg class="text-gray-600 dark:text-gray-400 group-hover:text-primary" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v88a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v48a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,200H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v48H48V120l80-80,80,80Z"/>
+                        </svg>
+                        <span class="text-gray-800 dark:text-gray-200 text-base font-medium">Dashboard</span>
+                    </a>
+                </div>
+
+                <!-- Traffic Overview -->
+                <div>
+                    <h2 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">Traffic Overview</h2>
+                    <div class="flex flex-col gap-2">
+                        <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 group" href="./vehicle.html">
+                            <svg class="text-gray-600 dark:text-gray-400 group-hover:text-primary" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M240,112H229.2L201.42,49.5A16,16,0,0,0,186.8,40H69.2a16,16,0,0,0-14.62,9.5L26.8,112H16a8,8,0,0,0,0,16h8v80a16,16,0,0,0,16,16H64a16,16,0,0,0,16-16V192h96v16a16,16,0,0,0,16,16h24a16,16,0,0,0,16-16V128h8A8,8,0,0,0,240,112Z"/>
+                            </svg>
+                            <span class="text-gray-800 dark:text-gray-200 text-base font-medium">Active Vehicles</span>
+                            <span class="ml-auto text-sm font-semibold text-gray-700 dark:text-gray-300 bg-background-light dark:bg-gray-800 px-2 py-0.5 rounded-full">1,200</span>
+                        </a>
+                        
+                        <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 group" href="./collision.html">
+                            <svg class="text-gray-600 dark:text-gray-400 group-hover:text-primary" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M236.8,188.09,149.35,36.22h0a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09Z"/>
+                            </svg>
+                            <span class="text-gray-800 dark:text-gray-200 text-base font-medium">Collision Alerts</span>
+                            <span class="ml-auto text-sm font-semibold text-red-500 bg-red-500/10 px-2 py-0.5 rounded-full">5</span>
+                        </a>
+                        
+                        <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 group" href="./suddenbraking.html">
+                            <svg class="text-gray-600 dark:text-gray-400 group-hover:text-primary" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M232,128a104,104,0,0,1-208,0c0-41,23.81-78.36,60.66-95.27a8,8,0,0,1,6.68,14.54C60.15,61.59,40,93.27,40,128a88,88,0,0,0,176,0c0-34.73-20.15-66.41-51.34-80.73a8,8,0,0,1,6.68-14.54C208.19,49.64,232,87,232,128Z"/>
+                            </svg>
+                            <span class="text-gray-800 dark:text-gray-200 text-base font-medium">Sudden Braking</span>
+                            <span class="ml-auto text-sm font-semibold text-yellow-500 bg-yellow-500/10 px-2 py-0.5 rounded-full">15</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Emergency Corridors -->
+                <div>
+                    <h2 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3 mt-6">Emergency Corridors</h2>
+                    <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 group" href="./active_corridore.html">
+                        <svg class="text-gray-600 dark:text-gray-400 group-hover:text-primary" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M240,112H228.64L201.25,64.06A16,16,0,0,0,187.36,56H165.42l-12-29.94A15.93,15.93,0,0,0,138.58,16H117.42a15.93,15.93,0,0,0-14.86,10.06L90.58,56H68.64a16,16,0,0,0-13.89,8.06L27.36,112H16a8,8,0,0,0,0,16h8v80a16,16,0,0,0,16,16H64a16,16,0,0,0,16-16V192h96v16a16,16,0,0,0,16,16h24a16,16,0,0,0,16-16V128h8A8,8,0,0,0,240,112Z"/>
+                        </svg>
+                        <span class="text-gray-800 dark:text-gray-200 text-base font-medium">Active Corridors</span>
+                        <span class="ml-auto text-sm font-semibold text-blue-500 bg-blue-500/10 px-2 py-0.5 rounded-full">3</span>
+                    </a>
+                </div>
+                
+                <!-- Road Quality -->
+                <div>
+                    <h2 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3 mt-6">Road Quality</h2>
+                    <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 group" href="./crowdSourceddata.html">
+                        <svg class="text-gray-600 dark:text-gray-400 group-hover:text-primary" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M235.92,199A8,8,0,0,1,225,195.92L155.32,72H136v8a8,8,0,0,1-16,0V72H100.68L31,195.92A8,8,0,0,1,17,188.08L82.32,72H24a8,8,0,0,1,0-16H232a8,8,0,0,1,0,16H173.68L239,188.08A8,8,0,0,1,235.92,199Z"/>
+                        </svg>
+                        <span class="text-gray-800 dark:text-gray-200 text-base font-medium">Crowdsourced Data</span>
+                        <span class="ml-auto text-sm font-semibold text-gray-700 dark:text-gray-300 bg-background-light dark:bg-gray-800 px-2 py-0.5 rounded-full">200 km</span>
+                    </a>
+                </div>
+
+                <!-- User Profile -->
+                <div>
+                    <h2 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3 mt-6">Account</h2>
+                    <a class="flex items-center gap-3 p-3 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary" href="./profile.html">
+                        <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"/>
+                        </svg>
+                        <span class="text-base font-medium">User Profile</span>
+                    </a>
+                </div>
+            </nav>
+            
+            <!-- Theme Toggle -->
+            <div class="mt-auto pt-6">
+                <button id="theme-toggle" class="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 w-full">
+                    <svg class="text-gray-600 dark:text-gray-400" fill="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+                    </svg>
+                    <span class="text-gray-800 dark:text-gray-200 text-sm font-medium">Toggle Theme</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 flex flex-col p-6">
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-6 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">User Profile</h1>
+                    <p class="text-gray-600 dark:text-gray-400">Manage your account information and preferences</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
+                        <span class="text-white text-xl font-bold">VM</span>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                        <span class="text-sm text-green-600 dark:text-green-400 font-medium">Online</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Content -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Personal Information -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Personal Information</h2>
+                        <button class="text-primary hover:text-primary/80 text-sm font-medium">Edit</button>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Full Name</label>
+                                <p class="text-gray-900 dark:text-white font-medium">Vinod Kumar Maurya</p>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Username</label>
+                                <p class="text-gray-900 dark:text-white font-medium">VinodKumarMaurya5649</p>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Employee ID</label>
+                                <p class="text-gray-900 dark:text-white font-medium">VKM5649</p>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Department</label>
+                                <p class="text-gray-900 dark:text-white font-medium">Transport Authority</p>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Position</label>
+                            <p class="text-gray-900 dark:text-white font-medium">System Administrator</p>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Date of Joining</label>
+                            <p class="text-gray-900 dark:text-white font-medium">January 15, 2020</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Contact Information</h2>
+                        <button class="text-primary hover:text-primary/80 text-sm font-medium">Edit</button>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email Address</label>
+                            <p class="text-gray-900 dark:text-white font-medium">vinod.maurya@gov.in</p>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Phone Number</label>
+                            <p class="text-gray-900 dark:text-white font-medium">+91 98765 43210</p>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Office Address</label>
+                            <div class="text-gray-900 dark:text-white font-medium">
+                                <p>Transport Bhawan</p>
+                                <p>1 Parliament Street</p>
+                                <p>New Delhi - 110001, India</p>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Emergency Contact</label>
+                            <p class="text-gray-900 dark:text-white font-medium">+91 98765 43211</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Access & Permissions -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Access & Permissions</h2>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Access Level</label>
+                            <div class="flex items-center gap-2">
+                                <span class="px-3 py-1 text-sm font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">Administrator</span>
+                                <span class="px-3 py-1 text-sm font-semibold rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400">Full Access</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Permissions</label>
+                            <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span>System Configuration</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span>User Management</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span>Emergency Controls</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span>Data Analytics & Reports</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span>API Access</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Login Activity -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Login Activity</h2>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Current Session</label>
+                            <p class="text-gray-900 dark:text-white font-medium">2025-10-07 16:10:29 UTC</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Session Duration: 2h 45m</p>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Last Login</label>
+                            <p class="text-gray-900 dark:text-white font-medium">2025-10-06 14:22:15 UTC</p>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">IP Address</label>
+                            <p class="text-gray-900 dark:text-white font-medium">203.122.45.178</p>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Device</label>
+                            <p class="text-gray-900 dark:text-white font-medium">Chrome 118.0 on Windows 11</p>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Total Logins (30 days)</label>
+                            <p class="text-gray-900 dark:text-white font-medium">47 sessions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- System Preferences -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 lg:col-span-2">
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">System Preferences</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <h3 class="text-sm font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider">Dashboard Settings</h3>
+                            
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Auto-refresh data</span>
+                                <input type="checkbox" class="form-checkbox h-4 w-4 text-primary" checked>
+                            </div>
+                            
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Sound alerts</span>
+                                <input type="checkbox" class="form-checkbox h-4 w-4 text-primary">
+                            </div>
+                            
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Email notifications</span>
+                                <input type="checkbox" class="form-checkbox h-4 w-4 text-primary" checked>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Refresh interval</label>
+                                <select class="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-sm">
+                                    <option>5 seconds</option>
+                                    <option selected>10 seconds</option>
+                                    <option>30 seconds</option>
+                                    <option>1 minute</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <h3 class="text-sm font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider">Security Settings</h3>
+                            
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Two-factor authentication</span>
+                                <span class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">Enabled</span>
+                            </div>
+                            
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Login alerts</span>
+                                <input type="checkbox" class="form-checkbox h-4 w-4 text-primary" checked>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Session timeout</label>
+                                <select class="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-sm">
+                                    <option>30 minutes</option>
+                                    <option>1 hour</option>
+                                    <option selected>4 hours</option>
+                                    <option>8 hours</option>
+                                </select>
+                            </div>
+                            
+                            <div class="pt-2">
+                                <button class="w-full bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition-colors text-sm font-medium">
+                                    Change Password
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="mt-6 flex justify-end gap-3">
+                <button class="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    Cancel
+                </button>
+                <button class="px-4 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors">
+                    Save Changes
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        });
+        
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            html.classList.add('dark');
+        }
+
+        // Real-time clock update
+        function updateClock() {
+            const now = new Date();
+            const utcTime = now.toISOString().slice(0, 19).replace('T', ' ') + ' UTC';
+            
+            // Update session duration (simulate)
+            const sessionStart = new Date('2025-10-07T13:25:29Z');
+            const duration = Math.floor((now - sessionStart) / 1000);
+            const hours = Math.floor(duration / 3600);
+            const minutes = Math.floor((duration % 3600) / 60);
+            
+            const currentSessionElement = document.querySelector('p:contains("2025-10-07 16:10:29 UTC")');
+            if (currentSessionElement) {
+                currentSessionElement.textContent = utcTime;
+            }
+        }
+
+        // Update clock every minute
+        setInterval(updateClock, 60000);
+    </script>
+</body>
+</html>
