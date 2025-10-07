@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Sudden Braking Zones - V2V Mesh Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <style>
+        .ashoka-chakra {
+            width: 24px;
+            height: 24px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%231173d4"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM12 5c-.55 0-1 .45-1 1v2.27c-1.39.51-2.43 1.8-2.68 3.32H6c-.55 0-1 .45-1 1s.45 1 1 1h2.32c.25 1.52 1.29 2.81 2.68 3.32V18c0 .55.45 1 1 1s1-.45 1-1v-2.27c1.39-.51 2.43-1.8 2.68-3.32H18c.55 0 1-.45 1-1s-.45-1-1-1h-2.32c-.25-1.52-1.29-2.81-2.68-3.32V6c0-.55-.45-1-1-1zm-1 6h2v2h-2v-2z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+    <div class="flex h-screen w-full">
+        <!-- Sidebar (same structure as other pages) -->
+        <aside class="w-80 flex-shrink-0 bg-white dark:bg-background-dark border-r border-background-light dark:border-gray-800 p-6 flex flex-col">
+            <div class="flex items-center gap-3 mb-8">
+                <span class="ashoka-chakra"></span>
+                <h1 class="text-xl font-bold text-gray-900 dark:text-white">V2V Mesh Dashboard</h1>
+            </div>
+            
+            <nav class="flex flex-col gap-4">
+                <!-- Home/Dashboard -->
+                <div class="mb-4">
+                    <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 group" href="./index.html">
+                        <svg class="text-gray-600 dark:text-gray-400 group-hover:text-primary" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v88a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v48a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,200H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v48H48V120l80-80,80,80Z"/>
+                        </svg>
+                        <span class="text-gray-800 dark:text-gray-200 text-base font-medium">Dashboard</span>
+                    </a>
+                </div>
+
+                <!-- Traffic Overview -->
+                <div>
+                    <h2 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">Traffic Overview</h2>
+                    <div class="flex flex-col gap-2">
+                        <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 group" href="./vehicle.html">
+                            <svg class="text-gray-600 dark:text-gray-400 group-hover:text-primary" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M240,112H229.2L201.42,49.5A16,16,0,0,0,186.8,40H69.2a16,16,0,0,0-14.62,9.5L26.8,112H16a8,8,0,0,0,0,16h8v80a16,16,0,0,0,16,16H64a16,16,0,0,0,16-16V192h96v16a16,16,0,0,0,16,16h24a16,16,0,0,0,16-16V128h8a8,8,0,0,0,0-16ZM69.2,56H186.8l// filepath: d:\coding\html and css\V2V Mesh Dashboard\suddenbraking.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Sudden Braking Zones - V2V Mesh Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <style>
+        .ashoka-chakra {
+            width: 24px;
+            height: 24px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%231173d4"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM12 5c-.55 0-1 .45-1 1v2.27c-1.39.51-2.43 1.8-2.68 3.32H6c-.55 0-1 .45-1 1s.45 1 1 1h2.32c.25 1.52 1.29 2.81 2.68 3.32V18c0 .55.45 1 1 1s1-.45 1-1v-2.27c1.39-.51 2.43-1.8 2.68-3.32H18c.55 0 1-.45 1-1s-.45-1-1-1h-2.32c-.25-1.52-1.29-2.81-2.68-3.32V6c0-.55-.45-1-1-1zm-1 6h2v2h-2v-2z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+    <div class="flex h-screen w-full">
+        <!-- Sidebar (same structure as other pages) -->
+        <aside class="w-80 flex-shrink-0 bg-white dark:bg-background-dark border-r border-background-light dark:border-gray-800 p-6 flex flex-col">
+            <div class="flex items-center gap-3 mb-8">
+                <span class="ashoka-chakra"></span>
+                <h1 class="text-xl font-bold text-gray-900 dark:text-white">V2V Mesh Dashboard</h1>
+            </div>
+            
+            <nav class="flex flex-col gap-4">
+                <!-- Home/Dashboard -->
+                <div class="mb-4">
+                    <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 group" href="./index.html">
+                        <svg class="text-gray-600 dark:text-gray-400 group-hover:text-primary" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v88a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v48a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,200H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v48H48V120l80-80,80,80Z"/>
+                        </svg>
+                        <span class="text-gray-800 dark:text-gray-200 text-base font-medium">Dashboard</span>
+                    </a>
+                </div>
+
+                <!-- Traffic Overview -->
+                <div>
+                    <h2 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">Traffic Overview</h2>
+                    <div class="flex flex-col gap-2">
+                        <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 group" href="./vehicle.html">
+                            <svg class="text-gray-600 dark:text-gray-400 group-hover:text-primary" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M240,112H229.2L201.42,49.5A16,16,0,0,0,186.8,40H69.2a16,16,0,0,0-14.62,9.5L26.8,112H16a8,8,0,0,0,0,16h8v80a16,16,0,0,0,16,16H64a16,16,0,0,0,16-16V192h96v16a16,16,0,0,0,16,16h24a16,16,0,0,0,16-16V128h8a8,8,0,0,0,0-16ZM69.2,56H186.8l

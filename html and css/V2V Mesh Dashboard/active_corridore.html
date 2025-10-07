@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Public+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1173d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              display: ["Public Sans"],
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-background-light-200 dark:border-background-dark-700 px-10 py-3">
+<div class="flex items-center gap-4 text-black dark:text-white">
+<svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="text-lg font-bold leading-tight tracking-tight text-black dark:text-white">V2V Mesh</h2>
+</div>
+<nav class="flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-8">
+<a class="text-sm font-medium text-black/60 dark:text-white/60 hover:text-primary dark:hover:text-primary transition-colors" href="#">Overview</a>
+<a class="text-sm font-bold text-primary" href="#">Active Corridors</a>
+<a class="text-sm font-medium text-black/60 dark:text-white/60 hover:text-primary dark:hover:text-primary transition-colors" href="#">Incidents</a>
+<a class="text-sm font-medium text-black/60 dark:text-white/60 hover:text-primary dark:hover:text-primary transition-colors" href="#">Vehicles</a>
+<a class="text-sm font-medium text-black/60 dark:text-white/60 hover:text-primary dark:hover:text-primary transition-colors" href="#">Settings</a>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBYbNTtoxNloIi9bAO7KHr655b5cwZMtu0_npWQ4C9qird4pKqReBSalOeLWB7LEDGWyD3hU410rSZTEkqdIrcr12RO8vlD1xKBUY2CjAtt8yJQ-lqqoOK_bg_L5FuZ-XcIHb5sOvupZytLxN-CpeQxRp9_THYqbZUHxUAwZME7W9TUyK-zn9GMIgagXHfAefvQ7gJSD-AQoDvPMxhPV11Zucu2jg3OK2G9jv4UfTZCLGizpEH4Jj1rlalAYPAumfuT-Ge6dFOgkQ");'></div>
+</nav>
+</header>
+<main class="flex flex-1">
+<div class="flex flex-1">
+<aside class="w-80 border-r border-black/10 dark:border-white/10 flex flex-col">
+<div class="p-4 border-b border-black/10 dark:border-white/10">
+<h2 class="text-xl font-bold text-black dark:text-white">Active Corridors</h2>
+</div>
+<div class="p-4">
+<label class="relative block">
+<span class="sr-only">Search corridors</span>
+<span class="absolute inset-y-0 left-0 flex items-center pl-3 text-black/50 dark:text-white/50">
+<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+</span>
+<input class="form-input block w-full rounded-lg border-transparent bg-black/5 dark:bg-white/5 py-2 pl-10 pr-3 text-sm placeholder:text-black/50 dark:placeholder:text-white/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Search corridors" type="text"/>
+</label>
+</div>
+<div class="flex-1 overflow-y-auto">
+<a class="flex items-center gap-4 p-4 hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors" href="#">
+<div class="flex items-center justify-center rounded-lg bg-black/5 dark:bg-white/5 shrink-0 size-12 text-black/60 dark:text-white/60">
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+<path d="M235.92,199A8,8,0,0,1,225,195.92L155.32,72H136v8a8,8,0,0,1-16,0V72H100.68L31,195.92A8,8,0,0,1,17,188.08L82.32,72H24a8,8,0,0,1,0-16H232a8,8,0,0,1,0,16H173.68L239,188.08A8,8,0,0,1,235.92,199ZM128,112a8,8,0,0,0-8,8v16a8,8,0,0,0,16,0V120A8,8,0,0,0,128,112Zm0,56a8,8,0,0,0-8,8v16a8,8,0,0,0,16,0V176A8,8,0,0,0,128,168Z"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<p class="font-medium text-black dark:text-white">Corridor A</p>
+<p class="text-sm text-black/60 dark:text-white/60">Route 1</p>
+</div>
+</a>
+<a class="flex items-center gap-4 p-4 bg-primary/20 dark:bg-primary/30" href="#">
+<div class="flex items-center justify-center rounded-lg bg-black/5 dark:bg-white/5 shrink-0 size-12 text-black/60 dark:text-white/60">
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+<path d="M235.92,199A8,8,0,0,1,225,195.92L155.32,72H136v8a8,8,0,0,1-16,0V72H100.68L31,195.92A8,8,0,0,1,17,188.08L82.32,72H24a8,8,0,0,1,0-16H232a8,8,0,0,1,0,16H173.68L239,188.08A8,8,0,0,1,235.92,199ZM128,112a8,8,0,0,0-8,8v16a8,8,0,0,0,16,0V120A8,8,0,0,0,128,112Zm0,56a8,8,0,0,0-8,8v16a8,8,0,0,0,16,0V176A8,8,0,0,0,128,168Z"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<p class="font-medium text-black dark:text-white">Corridor B</p>
+<p class="text-sm text-black/60 dark:text-white/60">Route 2</p>
+</div>
+</a>
+<a class="flex items-center gap-4 p-4 hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors" href="#">
+<div class="flex items-center justify-center rounded-lg bg-black/5 dark:bg-white/5 shrink-0 size-12 text-black/60 dark:text-white/60">
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+<path d="M235.92,199A8,8,0,0,1,225,195.92L155.32,72H136v8a8,8,0,0,1-16,0V72H100.68L31,195.92A8,8,0,0,1,17,188.08L82.32,72H24a8,8,0,0,1,0-16H232a8,8,0,0,1,0,16H173.68L239,188.08A8,8,0,0,1,235.92,199ZM128,112a8,8,0,0,0-8,8v16a8,8,0,0,0,16,0V120A8,8,0,0,0,128,112Zm0,56a8,8,0,0,0-8,8v16a8,8,0,0,0,16,0V176A8,8,0,0,0,128,168Z"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<p class="font-medium text-black dark:text-white">Corridor C</p>
+<p class="text-sm text-black/60 dark:text-white/60">Route 3</p>
+</div>
+</a>
+<a class="flex items-center gap-4 p-4 hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors" href="#">
+<div class="flex items-center justify-center rounded-lg bg-black/5 dark:bg-white/5 shrink-0 size-12 text-black/60 dark:text-white/60">
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+<path d="M235.92,199A8,8,0,0,1,225,195.92L155.32,72H136v8a8,8,0,0,1-16,0V72H100.68L31,195.92A8,8,0,0,1,17,188.08L82.32,72H24a8,8,0,0,1,0-16H232a8,8,0,0,1,0,16H173.68L239,188.08A8,8,0,0,1,235.92,199ZM128,112a8,8,0,0,0-8,8v16a8,8,0,0,0,16,0V120A8,8,0,0,0,128,112Zm0,56a8,8,0,0,0-8,8v16a8,8,0,0,0,16,0V176A8,8,0,0,0,128,168Z"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<p class="font-medium text-black dark:text-white">Corridor D</p>
+<p class="text-sm text-black/60 dark:text-white/60">Route 4</p>
+</div>
+</a>
+<a class="flex items-center gap-4 p-4 hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors" href="#">
+<div class="flex items-center justify-center rounded-lg bg-black/5 dark:bg-white/5 shrink-0 size-12 text-black/60 dark:text-white/60">
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+<path d="M235.92,199A8,8,0,0,1,225,195.92L155.32,72H136v8a8,8,0,0,1-16,0V72H100.68L31,195.92A8,8,0,0,1,17,188.08L82.32,72H24a8,8,0,0,1,0-16H232a8,8,0,0,1,0,16H173.68L239,188.08A8,8,0,0,1,235.92,199ZM128,112a8,8,0,0,0-8,8v16a8,8,0,0,0,16,0V120A8,8,0,0,0,128,112Zm0,56a8,8,0,0,0-8,8v16a8,8,0,0,0,16,0V176A8,8,0,0,0,128,168Z"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<p class="font-medium text-black dark:text-white">Corridor E</p>
+<p class="text-sm text-black/60 dark:text-white/60">Route 5</p>
+</div>
+</a>
+</div>
+</aside>
+<div class="flex-1 flex flex-col">
+<div class="p-6">
+<h1 class="text-3xl font-bold text-black dark:text-white">Corridor B</h1>
+<p class="text-black/60 dark:text-white/60 mt-1">Monitor and manage this emergency vehicle priority corridor in real-time.</p>
+</div>
+<div class="flex-1 p-6 pt-0">
+<div class="relative bg-cover bg-center flex min-h-[320px] flex-1 flex-col justify-between rounded-xl overflow-hidden" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAuhmqPuJHy2SUyZtFysT0fmqFHCHsirlKMzKyjOUxzaD_028Chgz1O5_GQD7uSCBNJ5CxtOsmB-d_kD4oWRkegldNOkbYoOsuOKR5Ys1rS44B9JInwKaN8570V_ez6PN6XXYb9i3OwkgpcMNSM5VQrgTeJSFAp5rvZWYm_lBe6n83ZTwVvgPCx5vLNZdWFAjYMarKzzRPRYe6N3FWIILw8mr8HP33CO4XTL7gC0XBRmPlLRdVm3j52KYur8ysAMKPAuslHwc5RhQ");'>
+<div class="absolute top-4 left-4 w-1/3">
+<label class="relative block">
+<span class="sr-only">Search for a location or corridor</span>
+<span class="absolute inset-y-0 left-0 flex items-center pl-3 text-black/50 dark:text-white/50">
+<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+</span>
+<input class="form-input block w-full rounded-lg border-transparent bg-white dark:bg-background-dark py-2.5 pl-10 pr-3 text-sm shadow-md placeholder:text-black/50 dark:placeholder:text-white/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Search location or corridor" type="text"/>
+</label>
+</div>
+<div class="absolute bottom-4 right-4 flex flex-col items-end gap-3">
+<div class="flex flex-col shadow-md rounded-lg">
+<button class="flex size-10 items-center justify-center rounded-t-lg bg-white dark:bg-background-dark text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/5">
+<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path>
+</svg>
+</button>
+<button class="flex size-10 items-center justify-center rounded-b-lg bg-white dark:bg-background-dark text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/5 border-t border-black/10 dark:border-white/10">
+<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"></path>
+</svg>
+</button>
+</div>
+<button class="flex size-10 items-center justify-center rounded-lg bg-white dark:bg-background-dark shadow-md text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/5">
+<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.33,98.21,53.41,33l-.16-.05A16,16,0,0,0,32.9,53.25a1,1,0,0,0,.05.16L98.21,229.33A15.77,15.77,0,0,0,113.28,240h.3a15.77,15.77,0,0,0,15-11.29l23.56-76.56,76.56-23.56a16,16,0,0,0,.62-30.38ZM224,113.3l-76.56,23.56a16,16,0,0,0-10.58,10.58L113.3,224h0l-.06-.17L48,48l175.82,65.22.16.06Z"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>
