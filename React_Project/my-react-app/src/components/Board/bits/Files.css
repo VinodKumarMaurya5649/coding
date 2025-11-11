@@ -1,0 +1,10 @@
+.files{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--text-color);
+    span{
+         padding: var(--padding-size);
+    }
+}

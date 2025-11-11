@@ -1,0 +1,14 @@
+:root{
+       --tile-size:88px;
+    --light-tile: #fff;
+    --dark-tile: #c75d5dc4;
+    --bg-color: #90f790;
+    --text-color: #000;
+    --padding-size: 5.3px 45.5px 0px 34.2px;
+}
+@media all and (max-width: 450px) {
+    :root{
+        --tile-size : 35px;
+        --padding-size:0px 8px 0px 18px;
+    }
+}

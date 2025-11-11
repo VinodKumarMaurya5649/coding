@@ -1,0 +1,62 @@
+.pieces{     
+    position: absolute;
+    left: calc(4.75 * var(--tile-size));
+    top: 9.1px;
+    bottom: 30px;
+    right: calc(4.5 * var(--tile-size));
+    background-color: rgba(200, 0, 0, 0.5);
+}
+.piece{
+    width:12.5%;
+    height: 12.5%;
+    position: absolute;
+    background-size:100%;
+}
+.piece.br{background-image: url('./../../../../asset/chess-rook\ \(1\).svg');}
+.piece.wr{background-image: url('./../../../../asset/chess-rook.svg');}
+.piece.bb{background-image: url('./../../../../asset/chess-bishop\ \(1\).svg');}
+.piece.wb{background-image: url('./../../../../asset/chess-bishop.svg');}
+.piece.bq{background-image: url('./../../../../asset/chess-queen\ \(1\).svg');}
+.piece.wq{background-image: url('./../../../../asset/chess-queen.svg');}
+.piece.bk{background-image: url('./../../../../asset/chess-king\ \(1\).svg');}
+.piece.wk{background-image: url('./../../../../asset/chess-king.svg');}
+.piece.bn{background-image: url('./../../../../asset/chess-knight\ \(1\).svg');}
+.piece.wn{background-image: url('./../../../../asset/chess-knight.svg');}
+.piece.bp{background-image: url('./../../../../asset/chess\ \(1\).svg');}
+.piece.wp{background-image: url('./../../../../asset/chess.svg');}
+
+.piece.p-07 {transform: translate(0%,0%);}
+.piece.p-17{transform: translate(100%,0%);}
+.piece.p-27{transform: translate(200%,0%);}
+.piece.p-37{transform: translate(300%,0%);}
+.piece.p-47{transform: translate(400%,0%);}
+.piece.p-57{transform: translate(500%,0%);}
+.piece.p-67{transform: translate(600%,0%);}
+.piece.p-77{transform: translate(700%,0%);}
+
+.piece.p-06{transform: translate(0%,100%);}
+.piece.p-16{transform: translate(100%,100%);}
+.piece.p-26{transform: translate(200%,100%);}
+.piece.p-36{transform: translate(300%,100%);}
+.piece.p-46{transform: translate(400%,100%);}
+.piece.p-56{transform: translate(500%,100%);}
+.piece.p-66{transform: translate(600%,100%);}
+.piece.p-76{transform: translate(700%,100%);}
+
+.piece.p-02{transform: translate(0%,600%);}
+.piece.p-12{transform: translate(100%,600%);}
+.piece.p-22{transform: translate(200%,600%);}
+.piece.p-32{transform: translate(300%,600%);}
+.piece.p-42{transform: translate(400%,600%);}
+.piece.p-52{transform: translate(500%,600%);}
+.piece.p-62{transform: translate(600%,600%);}
+.piece.p-72{transform: translate(700%,600%);}
+
+.piece.p-01{transform: translate(0%,700%);}
+.piece.p-11{transform: translate(100%,700%);}
+.piece.p-21{transform: translate(200%,700%);}
+.piece.p-31{transform: translate(300%,700%);}
+.piece.p-41{transform: translate(400%,700%);}
+.piece.p-51{transform: translate(500%,700%);}
+.piece.p-61{transform: translate(600%,700%);}
+.piece.p-71{transform: translate(700%,700%);}

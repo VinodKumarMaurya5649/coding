@@ -1,0 +1,1 @@
+export const getCharecter = (file) => String.fromCharCode(96 + file);
