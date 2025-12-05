@@ -1,5 +1,5 @@
 tasks= []
-def add_task(title,description,priority='low',deadline=Non/e):
+def add_task(title,description,priority='low',deadline=None):
     task ={ 'title': title,'description': description,'priority': priority
     ,'deadline':deadline,'stetus':'pending',}
 
@@ -44,7 +44,7 @@ def filter_prior(priority):
     #filtered_task = [task for task in tasks if task['priority'] == priority]
     fitered_task= filter( lambda task,priority: task['priority'] == priority,tasks) #criteria 
     for task in fitered_task:
-        printf(f'{task["title"]}')
+        print(f'{task["title"]}')
 def filter_deadline(deadline):
     filtered_task = [task for task in tasks if task['deadline'] == deadline]
     return filtered_task 

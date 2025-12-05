@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Custom Tag Library — Web Components</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+        /* small demo page layout */
+        body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; padding: 24px; background:#f5f7fb; color:#212121; }
+        h1 { margin-bottom: 12px; }
+        .grid { display:flex; gap:16px; flex-wrap:wrap; }
+        section { width: 320px; }
+    </style>
+</head>
+<body>
+    <h1>Custom Tag Library (Web Components)</h1>
+    <p>Components: <code>&lt;ui-card&gt;</code>, <code>&lt;ui-badge&gt;</code>, <code>&lt;ui-btn&gt;</code></p>
+
+    <div class="grid">
+        <section>
+            <ui-card elev="3">
+                <span slot="header">Profile</span>
+                <div>
+                    <ui-badge color="teal">Pro</ui-badge>
+                    <p style="margin:8px 0 0 0">Short description inside the card. Use slots for header/content/footer.</p>
+                </div>
+                <div slot="footer">
+                    <ui-btn variant="primary" id="followBtn">Follow</ui-btn>
+                </div>
+            </ui-card>
+        </section>
+
+        <section>
+            <ui-card>
+                <span slot="header">Notifications</span>
+                <div>
+                    <p style="margin:0 0 8px 0">You have <ui-badge color="red">5</ui-badge> new messages.</p>
+                </div>
+                <div slot="footer">
+                    <ui-btn variant="ghost">View</ui-btn>
+                </div>
+            </ui-card>
+        </section>
+
+        <section>
+            <ui-card>
+                <span slot="header">Controls</span>
+                <div>
+                    <ui-btn id="inc" variant="primary">Increment</ui-btn>
+                    <ui-badge id="counter" color="purple">0</ui-badge>
+                </div>
+            </ui-card>
+        </section>
+    </div>
+
+    <script>
+        /* ui-card: container with header, default slot, footer; supports elev (0-5) */
+        class UICard extends HTMLElement {
+            static get observedAttributes() { return ['elev']; }
+            constructor(){
+                super();
+                const s = this.attachShadow({mode:'open'});
+                s.innerHTML = `
+                    <style>
+                        :host { display:block; border-radius:10px; background:white; padding:12px; box-sizing:border-box;
+                                     box-shadow:var(--elev, 0 1px 2px rgba(16,24,40,0.06)); }
+                        header { font-weight:600; margin-bottom:8px; font-size:0.98rem; color:#0f172a; }
+                        footer { margin-top:10px; display:flex; gap:8px; justify-content:flex-end; }
+                        ::slotted(*) { font-size:0.95rem; color:#334155; }
+                    </style>
+                    <header><slot name="header"></slot></header>
+                    <section><slot></slot></section>
+                    <footer><slot name="footer"></slot></footer>
+                `;
+            }
+            attributeChangedCallback(name, oldV, newV){
+                if(name === 'elev'){
+                    const map = {
+                        '0': 'none',
+                        '1': '0 1px 2px rgba(16,24,40,0.06)',
+                        '2': '0 4px 8px rgba(15,23,42,0.07)',
+                        '3': '0 10px 20px rgba(2,6,23,0.08)',
+                        '4': '0 20px 40px rgba(2,6,23,0.09)',
+                        '5': '0 30px 60px rgba(2,6,23,0.12)'
+                    };
+                    this.style.setProperty('--elev', map[newV] || map['1']);
+                }
+            }
+            connectedCallback(){
+                if(!this.hasAttribute('elev')) this.setAttribute('elev','1');
+            }
+        }
+        customElements.define('ui-card', UICard);
+
+        /* ui-badge: small inline badge, color attribute */
+        class UIBadge extends HTMLElement {
+            static get observedAttributes() { return ['color','pill']; }
+            constructor(){
+                super();
+                const s = this.attachShadow({mode:'open'});
+                s.innerHTML = `
+                    <style>
+                        :host { display:inline-block; font-size:0.78rem; font-weight:600; line-height:1;
+                                     padding:4px 8px; border-radius:6px; color:var(--fg,#fff); background:var(--bg,#666); vertical-align:middle; }
+                        :host([pill]){ border-radius:999px; padding-left:10px; padding-right:10px; }
+                    </style>
+                    <slot></slot>
+                `;
+            }
+            attributeChangedCallback(){ this.update(); }
+            connectedCallback(){ this.update(); }
+            update(){
+                const color = (this.getAttribute('color')||'gray').toLowerCase();
+                const palettes = {
+                    gray: {bg:'#6b7280', fg:'#fff'},
+                    red: {bg:'#ef4444', fg:'#fff'},
+                    teal: {bg:'#14b8a6', fg:'#fff'},
+                    purple: {bg:'#7c3aed', fg:'#fff'},
+                    green: {bg:'#10b981', fg:'#fff'},
+                };
+                const p = palettes[color] || {bg: color, fg:'#fff'}; // allow CSS color strings
+                this.style.setProperty('--bg', p.bg);
+                this.style.setProperty('--fg', p.fg);
+            }
+        }
+        customElements.define('ui-badge', UIBadge);
+
+        /* ui-btn: simple button element, supports variant (primary, ghost) and disabled */
+        class UIButton extends HTMLElement {
+            static get observedAttributes(){ return ['variant','disabled']; }
+            constructor(){
+                super();
+                const s = this.attachShadow({mode:'open'});
+                s.innerHTML = `
+                    <style>
+                        :host { display:inline-block; }
+                        button {
+                            font:inherit; padding:8px 12px; border-radius:8px; border:1px solid transparent;
+                            background:var(--bg,#111827); color:var(--fg,#fff); cursor:pointer; transition:all .12s;
+                            box-shadow:none;
+                        }
+                        button[variant="ghost"]{ background:transparent; color:#0f172a; border-color:transparent; }
+                        button[variant="primary"]{ background:#2563eb; color:#fff; border-color:transparent; }
+                        button:disabled{ opacity:0.5; cursor:not-allowed; transform:none; }
+                    </style>
+                    <button part="button"><slot></slot></button>
+                `;
+                this._btn = s.querySelector('button');
+                this._onClick = e => this.dispatchEvent(new CustomEvent('click', {bubbles:true, composed:true}));
+            }
+            connectedCallback(){
+                this._upgradeProp('variant');
+                this._upgradeProp('disabled');
+                this._syncAttrs();
+                this._btn.addEventListener('click', this._onClick);
+            }
+            disconnectedCallback(){ this._btn.removeEventListener('click', this._onClick); }
+            attributeChangedCallback(){ this._syncAttrs(); }
+            _syncAttrs(){
+                const variant = this.getAttribute('variant') || 'primary';
+                this._btn.setAttribute('variant', variant);
+                if(this.hasAttribute('disabled')) this._btn.setAttribute('disabled','');
+                else this._btn.removeAttribute('disabled');
+            }
+            _upgradeProp(prop){
+                if(this.hasOwnProperty(prop)){
+                    let val = this[prop];
+                    delete this[prop];
+                    this[prop] = val;
+                }
+            }
+        }
+        customElements.define('ui-btn', UIButton);
+
+        /* Demo interactivity */
+        document.getElementById('followBtn')?.addEventListener('click', e => {
+            e.currentTarget.innerHTML = 'Following';
+            e.setAttribute('disabled','');
+        });
+        const inc = document.getElementById('inc');
+        const counter = document.getElementById('counter');
+        let n = 0;
+        inc?.addEventListener('click', () => (counter.textContent = ++n));
+    </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+V2V Mesh Dashboard/
+├── active_corridore.html      # Active emergency corridors monitoring
+├── collision.html             # Collision detection and alerts
+├── crowdSourceddata.html     # Crowdsourced road quality data
+├── index.html                # Main dashboard (entry point)
+├── profile.html              # User profile management
+├── suddenbraking.html        # Sudden braking events monitoring
+└── vehicle.html              # Active vehicle tracking
