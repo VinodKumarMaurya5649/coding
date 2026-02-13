@@ -3,7 +3,7 @@ public class StringOpration {
     System.out.print(i);
 }
     public static void main(String[] args) {
-        String a  = "hell0";
+        // String a  = "hell0";
     //     String b  = "hell0";
     //    System.out.println(a.equals(b));
     //    char [] ar = a.toCharArray();
