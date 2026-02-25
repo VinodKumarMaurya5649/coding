@@ -1,0 +1,6 @@
+#sprite-image {
+    height: 256px; /* Height of a single frame */
+    width: 256px;  /* Width of a single frame */
+    background-image: url('your-spritesheet-url.png');
+    background-position: 0px 0px; /* Start at the first frame */
+}

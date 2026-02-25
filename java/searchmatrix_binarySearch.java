@@ -10,8 +10,6 @@ class Solution {
     public boolean searchMatrix(int[][] mat, int target) {
         int m = mat[0].length;
         int n = mat.length;
-        // int beg = 0;
-        // int end = m * n - 1;
         if (m == 0) {
             return false;
         }

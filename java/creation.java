@@ -18,7 +18,7 @@ class LinkedList1{
 }
 public class creation{
     public static void main(String args[]){
-        LinkedList sll1 = new LinkedList();
+        LinkedList1 sll1 = new LinkedList1();
         sll1.head = new Node(1);
         sll1.head.next = new Node(2);
         sll1.head.next.next = new Node(3);
