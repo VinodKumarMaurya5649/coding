@@ -28,4 +28,4 @@ book1 = Book("bookname","auther","comrdy",2003)
 #print(book1.__doc__)\
 x=10
 y=20
-X.__add__(y) # 30
+x.__add__(y) # 30
