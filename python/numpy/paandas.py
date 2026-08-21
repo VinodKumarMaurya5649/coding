@@ -1,4 +1,5 @@
 import pandas as pd
+
 series = pd.Series([12,45,12,1,2,1])
 print(series)
 
@@ -15,3 +16,5 @@ df =pd.DataFrame(data)
 # df.to_csv("tefg.csv")
 stu = pd.read_csv("test.csv")
 print(stu)
+print(df.head())
+print(df.tail())

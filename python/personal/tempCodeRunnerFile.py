@@ -1,0 +1,1 @@
+p.bar(Cat, values, color=['red', 'blue', 'green', 'orange'])
